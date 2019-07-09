@@ -1,82 +1,33 @@
-<html>
-
-    <head>
-    
-
-
-        
-        <link rel="stylesheet" type="text/css" href="nav.css">
-            
-        <title>
-            John Campbell
-        </title>
-        
-        
-        <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-        
-    
-        
-        <div class="navbar">
-            <a href="index.html">Home</a>
-            <a href="experience.html">Experience</a>
-            <a href = "contact.html">Contact Me</a>
-            <div class="dropdown">
-                <button class="dropbtn">Examples 
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                <a href="java.html">Java</a>
-                <a href="c++.html">C++</a>
-                <a href="python.html">Python</a>
-                <a href="jss.html" class=active>Javascript</a>
-                </div>
-            </div> 
-        </div>
-        
-        
-        
-    </head>
-    
-    <body>
-    
-     
-        <button id="flick">Flick on</button>
-        <button id="on">Turn on</button>
-
-        <img id="myImage" src="pic_bulboff.gif" style="width:100px">
-
-        <button id="off">Turn off</button>
-        
-
-        <p> </p>
-
-        
-        
-            <script>
-    var header = document.querySelector('header');
+ var header = document.querySelector('header');
     var section = document.querySelector('section');
+
     var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
     request.responseType = 'text';
     request.send();
+
     request.onload = function() {
       var superHeroesText = request.response;
       var superHeroes = JSON.parse(superHeroesText);
       populateHeader(superHeroes);
       showHeroes(superHeroes);
     }
+
     function populateHeader(jsonObj) {
       var myH1 = document.createElement('h1');
       myH1.textContent = jsonObj['squadName'];
       header.appendChild(myH1);
+
       var myPara = document.createElement('p');
       myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
       header.appendChild(myPara);
+
     }
+
     function showHeroes(jsonObj) {
       var heroes = jsonObj['members'];
+
       for(var i = 0; i < heroes.length; i++) {
         var myArticle = document.createElement('article');
         var myH2 = document.createElement('h2');
@@ -84,39 +35,25 @@
         var myPara2 = document.createElement('p');
         var myPara3 = document.createElement('p');
         var myList = document.createElement('ul');
+
         myH2.textContent = heroes[i].name;
         myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
         myPara2.textContent = 'Age: ' + heroes[i].age;
         myPara3.textContent = 'Superpowers:';
+
         var superPowers = heroes[i].powers;
         for(var j = 0; j < superPowers.length; j++) {
           var listItem = document.createElement('li');
           listItem.textContent = superPowers[j];
           myList.appendChild(listItem);
         }
+
         myArticle.appendChild(myH2);
         myArticle.appendChild(myPara1);
         myArticle.appendChild(myPara2);
         myArticle.appendChild(myPara3);
         myArticle.appendChild(myList);
+
         section.appendChild(myArticle);
       }
     }
-    </script>
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    </body>
-    
-    
-</html>
-
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="jss.js" type="text/javascript"></script>
