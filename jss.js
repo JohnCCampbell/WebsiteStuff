@@ -5,12 +5,13 @@ var state;
 
 
 
+
 $(document).ready(function()       
 {
     
     picture = document.getElementById("myImage");
     buttonFlick = document.getElementById("flick");
-    thing = document.getElementById("words");
+    //thing = document.getElementById("words");
     on = 'pic_bulbon.gif';
     off = 'pic_bulboff.gif';
     var garb = state;
@@ -42,91 +43,101 @@ $(document).ready(function()
             buttonFlick.innerHTML = "Flick off";
         }
         });
-    /*
-    
-        var header = document.querySelector('header');
-        var section = document.querySelector('section');
-    
-        var script = document.createElement('script');
-        //script.src = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp';
-        var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
-        var request = new XMLHttpRequest();
-        request.open('GET', requestURL);
-        request.responseType = 'json';
-        request.send();
-    
-        request.onload = function() 
-        {
-            var superHeroes = request.response;
-            populateHeader(superHeroes);
-            showHeroes(superHeroes);
-        }
-    
-    
-        function populateHeader(jsonObj) 
-        {
-            var myH1 = document.createElement('h1');
-            myH1.textContent = jsonObj['squadName'];
-            header.appendChild(myH1);
-
-            var myPara = document.createElement('p');
-            myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
-            header.appendChild(myPara);
-        }
-        
-    
-    function showHeroes(jsonObj) {
-  var heroes = jsonObj['members'];
-      
-  for (var i = 0; i < heroes.length; i++) {
-    var myArticle = document.createElement('article');
-    var myH2 = document.createElement('h2');
-    var myPara1 = document.createElement('p');
-    var myPara2 = document.createElement('p');
-    var myPara3 = document.createElement('p');
-    var myList = document.createElement('ul');
-
-    myH2.textContent = heroes[i].name;
-    myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
-    myPara2.textContent = 'Age: ' + heroes[i].age;
-    myPara3.textContent = 'Superpowers:';
-        
-    var superPowers = heroes[i].powers;
-    for (var j = 0; j < superPowers.length; j++) {
-      var listItem = document.createElement('li');
-      listItem.textContent = superPowers[j];
-      myList.appendChild(listItem);
-    }
-
-    myArticle.appendChild(myH2);
-    myArticle.appendChild(myPara1);
-    myArticle.appendChild(myPara2);
-    myArticle.appendChild(myPara3);
-    myArticle.appendChild(myList);
-
-    section.appendChild(myArticle);
-  }
-}
-    
-    
- 
-    
-    
-    
-    
-    
-    
-    
-    
-        
-    
-        document.getElementsByTagName('head')[0].appendChild(script);
-    
-       */
-    
-    
-    
-    
-    
-    
 });
+
+
+    /*
+    var section = document.querySelector('section');  
+
+
+    var abc = document.getElementById('abc');   
+    
+    
+    var requestURL = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp';
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'text';
+    request.send();
+
+    abc.innerHTML = "hey1";
+
+    request.onload = function() {
+      var response = request.response;
+      var ParseResponse = JSON.parse(response);
+        document.getElementById("abc").innerHTML = "Squidward";
+        
+        var membos = ParseResponse.Feature;
+      
+        
+        document.getElementById("abc").innerHTML = membos;
+        abc.innerHTML = "hey221"
+    }
+    */
+
+    /*
+    var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'text';
+    request.send();
+
+    request.onload = function() {
+      var superHeroesText = request.response;
+      var superHeroes = JSON.parse(superHeroesText);
+        populateHeader(superHeroes);
+        //showHeroes(superHeroes);
+        document.getElementById("abc").innerHTML = "Squidward";
+        abc.innerHTML = "ssss";
+         
+    }
+    */
+    
+    
+    
+    
+    
+
+    //abc.innerHTML = "hey2";
+
+      var JSONtext = request.response;
+    //abc.innerHTML = "hey3";
+
+
+    //thing.innerHTML = JSONtext['metadata']['mag'] + "pork";
+        var ParsedText = JSON.parse(JSONtext);
+    //abc.innerHTML = "hey4";
+
+
+   // var b1 = ParsedText;
+  //  ParsedText = b1;
+
+document.getElementById("abc").innerHTML = myObj.age;
+
+
+    
+      request.onload = function() {
+      var JSONtext = request.response;
+      var ParsedText = JSON.parse(JSONtext);
+      populateHeader(ParsedText);
+      //showHeroes(ParsedText);
+          
+        thing.innerHTML = request.metadata.mag;
+    
+    }
+      
+        
+
+    
+    function populateHeader(jsonObj) {
+        thing.innerHTML = "test2";
+      var myH1 = document.createElement('h1');
+      myH1.textContent = jsonObj['metadata']['mag'];
+      section.appendChild(myH1);
+
+      var myPara = document.createElement('p');
+      myPara.textContent = 'Hometown: ' + jsonObj['FeatureCollection']['mag'] + ' // Formed: ' + jsonObj['metadata']['distance'];
+      section.appendChild(myPara);
+
+    }
+    
+//});

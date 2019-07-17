@@ -3,7 +3,12 @@
     var header = document.querySelector('header');
     var section = document.querySelector('section');
 
-    var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+    //var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+
+    var requestURL = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson';
+
+
+
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
     request.responseType = 'text';
@@ -15,19 +20,25 @@
         document.getElementById("abc").innerHTML = "1";
       var superHeroesText = request.response;
         document.getElementById("abc").innerHTML = "2";
-      var superHeroes = JSON.parse(superHeroesText);
+      var Earthquake = superHeroesText;
+      //var superHeroes = JSON.parse(superHeroesText);
         document.getElementById("abc").innerHTML = "3";
-        populateHeader(superHeroes);
+    //var features =[];
+    features = Earthquake.features;    
+        populateHeader(Earthquake);
         document.getElementById("abc").innerHTML = "4";
         //showHeroes(superHeroes);
 
         
-        var membos = superHeroes.members;
-        var name = membos[0].name;
+        //var membos = superHeroes.members;
+        //var name = membos[0].name;
+        document.getElementById("abc").innerHTML = "charizard";
+        document.getElementById("abc").innerHTML = Earthquake.defaults;
+        document.getElementById("abc").innerHTML = "squirtle";
+        document.getElementById("abc").innerHTML = features;
+        document.getElementById("abc").innerHTML = "venosaur";
         
-        
-        document.getElementById("abc").innerHTML = superHeroes.members[1].powers[2];
-         
+        document.getElementById("abc").innerHTML = Earthquake.features.properties.updated;
     }
 
     
@@ -40,9 +51,9 @@
       //header.appendChild(myH1);
                 document.getElementById("abc").innerHTML = "8";
 
-      var myPara = document.createElement('p');
+      //var myPara = document.createElement('p');
                 document.getElementById("abc").innerHTML = "9";
-      myPara.textContent = 'Hometown: ' + jsonObj.homeTown + ' // Formed: ' + jsonObj.formed;
+     // myPara.textContent = 'Hometown: ' + jsonObj.homeTown + ' // Formed: ' + jsonObj.formed;
                 document.getElementById("abc").innerHTML = "10";
       //header.appendChild(myPara);
                 document.getElementById("abc").innerHTML = "11";
