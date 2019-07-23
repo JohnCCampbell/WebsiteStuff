@@ -1,7 +1,7 @@
    document.getElementById("abc").innerHTML = "Squidward";
 
-    var header = document.querySelector('header');
-    var section = document.querySelector('section');
+    //var header = document.querySelector('header');
+    //var section = document.querySelector('section');
 
     //var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
 
@@ -24,21 +24,27 @@
       //var superHeroes = JSON.parse(superHeroesText);
         document.getElementById("abc").innerHTML = "3";
     //var features =[];
-    features = Earthquake.features;    
-        populateHeader(Earthquake);
+    //features = Earthquake.features;    
+        //populateHeader(Earthquake);
         document.getElementById("abc").innerHTML = "4";
         //showHeroes(superHeroes);
 
+        
+        var EQ = [];
+            EQ = Earthquake.features;
+        //var EQnum = EQ.length;
         
         //var membos = superHeroes.members;
         //var name = membos[0].name;
         document.getElementById("abc").innerHTML = "charizard";
         document.getElementById("abc").innerHTML = Earthquake.defaults;
         document.getElementById("abc").innerHTML = "squirtle";
-        document.getElementById("abc").innerHTML = features;
+        document.getElementById("abc").innerHTML = Earthquake;
         document.getElementById("abc").innerHTML = "venosaur";
         
-        document.getElementById("abc").innerHTML = Earthquake.features.properties.updated;
+        document.getElementById("abc").innerHTML = EQ;
+        
+        
     }
 
     
@@ -46,7 +52,7 @@
                 document.getElementById("abc").innerHTML = "5";
       var myH1 = document.createElement('h1');
                 document.getElementById("abc").innerHTML = "6";
-      myH1.textContent = jsonObj['squadName'];
+      myH1.textContent = jsonObj['features'];
                 document.getElementById("abc").innerHTML = "7";
       //header.appendChild(myH1);
                 document.getElementById("abc").innerHTML = "8";

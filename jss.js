@@ -29,7 +29,7 @@ $(document).ready(function()
         document.getElementById("myImage").src= off;
         buttonFlick.innerHTML = "Flick on";
         });
-    $("#flick").click(function(c)
+    $("#flick").click(function()
         {
 
         if(buttonFlick.innerHTML == "Flick off")
@@ -46,51 +46,6 @@ $(document).ready(function()
 });
 
 
-    /*
-    var section = document.querySelector('section');  
-
-
-    var abc = document.getElementById('abc');   
-    
-    
-    var requestURL = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp';
-    var request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-    request.responseType = 'text';
-    request.send();
-
-    abc.innerHTML = "hey1";
-
-    request.onload = function() {
-      var response = request.response;
-      var ParseResponse = JSON.parse(response);
-        document.getElementById("abc").innerHTML = "Squidward";
-        
-        var membos = ParseResponse.Feature;
-      
-        
-        document.getElementById("abc").innerHTML = membos;
-        abc.innerHTML = "hey221"
-    }
-    */
-
-    /*
-    var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
-    var request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-    request.responseType = 'text';
-    request.send();
-
-    request.onload = function() {
-      var superHeroesText = request.response;
-      var superHeroes = JSON.parse(superHeroesText);
-        populateHeader(superHeroes);
-        //showHeroes(superHeroes);
-        document.getElementById("abc").innerHTML = "Squidward";
-        abc.innerHTML = "ssss";
-         
-    }
-    */
     
     
     
@@ -141,3 +96,4 @@ document.getElementById("abc").innerHTML = myObj.age;
     }
     
 //});
+

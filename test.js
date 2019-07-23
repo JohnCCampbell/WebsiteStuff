@@ -19,7 +19,7 @@
         document.getElementById("abc").innerHTML = "3";
         populateHeader(superHeroes);
         document.getElementById("abc").innerHTML = "4";
-        //showHeroes(superHeroes);
+        showHeroes(superHeroes);
 
         
         var membos = superHeroes.members;
@@ -37,14 +37,14 @@
                 document.getElementById("abc").innerHTML = "6";
       myH1.textContent = jsonObj['squadName'];
                 document.getElementById("abc").innerHTML = "7";
-      //header.appendChild(myH1);
+      header.appendChild(myH1);
                 document.getElementById("abc").innerHTML = "8";
 
       var myPara = document.createElement('p');
                 document.getElementById("abc").innerHTML = "9";
       myPara.textContent = 'Hometown: ' + jsonObj.homeTown + ' // Formed: ' + jsonObj.formed;
                 document.getElementById("abc").innerHTML = "10";
-      //header.appendChild(myPara);
+      header.appendChild(myPara);
                 document.getElementById("abc").innerHTML = "11";
 
     }
@@ -52,7 +52,7 @@
 
 
  
-/*
+
     function showHeroes(jsonObj) {
       var heroes = jsonObj['members'];
 
@@ -86,5 +86,5 @@
       }
     }
     
-    */
+    
 

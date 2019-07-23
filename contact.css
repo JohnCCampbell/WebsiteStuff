@@ -1,0 +1,78 @@
+.contact{
+    float left;
+    font-size: 20;
+    margin-top: 10%;
+    margin-left: 10%;
+    text-align: center;
+    
+    
+}
+
+.one{
+    display: inline-block;
+    margin-left:5%;
+    margin-top:2%;
+    background-color:aquamarine;
+    padding: 2% 2% 2% 2%;
+    text-align: center;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 70%;
+    right: 75%;
+    
+}
+
+.two{
+    display: inline-block;
+    margin-left:5%;
+    margin-top:8%;
+    background-color:aquamarine;
+    padding: 2% 2% 2% 2%;
+    text-align: center;
+    vertical-align:center
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 59%;
+    right: 67%;
+}
+
+.three{
+display: inline-block;
+    margin-left:5%;
+    margin-top:8%;
+    background-color:aquamarine;
+    padding: 2% 2% 2% 2%;
+    text-align: center;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 48%;
+    right: 61%;
+}
+
+.four{
+    display: inline-block;
+    margin-left:5%;
+    margin-top:8%;
+    background-color:aquamarine;
+    padding: 2% 2% 2% 2%;
+    text-align: center;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 37%;
+    right: 54%;
+}
+
+.five{
+    display: inline-block;
+    margin-left:5%;
+    margin-top:8%;
+    background-color:aquamarine;
+    padding: 2% 2% 2% 2%;
+    text-align: center;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 26%;
+    right: 47.5%;
+}
+
+
